@@ -297,6 +297,6 @@ else:
     btn2 = st.sidebar.button('Find Investor Details')
     if btn2:
         investor_details(selected_investor)
-    st.sidebar.markdown("<br><br><br><br><br><br><hr>",
+    st.sidebar.markdown("<br><br><br><br><br><br><br><hr>",
                         unsafe_allow_html=True)
     st.sidebar.markdown("<p style='text-align: center;'>Created by <b>Navneet</b></p>", unsafe_allow_html=True)
