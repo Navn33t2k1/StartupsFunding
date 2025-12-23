@@ -84,9 +84,10 @@ The dataset contains funding information for Indian startups.
 * Real-time data exploration
 
 🤖 **Recommendation Systems**
-🔹 **Startup Recommendation System**
 
 * Implemented using KMeans clustering
+
+🔹 **Startup Recommendation System**
 
 Helps identify similar startups for benchmarking and competitive analysis
 
