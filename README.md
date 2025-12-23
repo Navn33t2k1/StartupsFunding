@@ -1,4 +1,5 @@
 📊 Indian Startups Funding Analysis & Recommendation System
+
 📌 Project Overview
 
 This project provides an end-to-end analysis of the Indian startup funding ecosystem, combining data cleaning, exploratory analysis, interactive visualization, and recommendation systems.
@@ -6,9 +7,9 @@ It enables insights for both startups and investors through clustering-based rec
 
 🎯 Objectives
 
-Analyze startup funding trends across time, cities, industries, and funding stages
+* Analyze startup funding trends across time, cities, industries, and funding stages
 
-Build an interactive dashboard for dynamic data exploration
+* Build an interactive dashboard for dynamic data exploration
 
 Improve data quality using fuzzy string matching
 
