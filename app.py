@@ -247,7 +247,9 @@ def investor_details(name):
     st.dataframe(df[df['Investor'].str.contains(name, case=False)][['Date', 'StartUp', 'Vertical', 'City', 'Round', 'Amount in Cr']].reset_index(drop=True).head())
 
     st.subheader('Similar Investors')
-    st.dataframe(investor_df1[investor_df1['Investor'].str.contains(name, case=False)].sort_values('Avg_Investment', ascending=False).iloc[:5, :5])
+    temp_startup_cluster=investor_df1[investor_df1['Investor'].str.contains(name, case=False)]['Cluster'].values[0]
+    similar_investors=investor_df1[investor_df1['Cluster']==temp_startup_cluster].sort_values(by='Avg_Investment', ascending=False).loc[:,['Investor', 'Total_Investment', 'Num_Deals', 'Unique_Startups']].reset_index(drop=True)[:5]
+    st.dataframe(similar_investors)
 
     if invest_option== 'Generally Invests in Sectors':
         st.subheader('Generally Invests in Sectors')
