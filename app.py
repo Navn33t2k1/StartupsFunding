@@ -244,7 +244,7 @@ def investor_details(name):
         st.dataframe(df[df['Investor'].str.contains(name, case=False)][['StartUp', 'Amount in Cr']].sort_values(by='Amount in Cr', ascending=False).reset_index(drop=True)[:1])
 
     st.write('Most Recent Investment')
-    st.dataframe(df[df['Investor'].str.contains(name, case=False)][['Date', 'StartUp', 'Vertical', 'City', 'Round', 'Amount in Cr']].reset_index(drop=True).head())
+    st.dataframe(df[df['Investor'].str.contains(name, case=False)][['Date', 'StartUp', 'Vertical', 'City', 'Round', 'Amount in Cr']].sort_values(by='Date', ascending=False).reset_index(drop=True).head())
 
     st.subheader('Similar Investors')
     temp_startup_cluster=investor_df1[investor_df1['Investor'].str.contains(name, case=False)]['Cluster'].values[0]
