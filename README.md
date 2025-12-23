@@ -1,4 +1,4 @@
-📊 Indian Startups Funding Analysis & Recommendation System
+📊 **Indian Startups Funding Analysis & Recommendation System**
 
 📌 Project Overview
 
