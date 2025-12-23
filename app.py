@@ -299,12 +299,12 @@ def investor_details(name):
     st.plotly_chart(fig14)
 
 st.sidebar.subheader("Indian StartUps Funding Ecosystem")
-option = st.sidebar.selectbox('Select One', ['Overall Analysis', 'StartUp', 'Investor'])
+option = st.sidebar.selectbox('Select One', ['Overall Analysis', 'StartUp Analysis', 'Investor Analysis'])
 if option=='Overall Analysis':
     Overall_Analysis()
     st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr>", unsafe_allow_html=True)
     st.sidebar.markdown("<p style='text-align: center;'>Created by <b>Navneet</b></p>", unsafe_allow_html=True)
-elif option=='StartUp':
+elif option=='StartUp Analysis':
     selected_startup = st.sidebar.selectbox('Select StartUp', sorted(unique_startups))
     btn1 = st.sidebar.button('Find StartUp Details')
     if btn1:
