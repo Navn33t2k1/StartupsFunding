@@ -287,7 +287,7 @@ elif option=='StartUp Analysis':
     btn1 = st.sidebar.button('Find StartUp Details')
     if btn1:
         Startup_Analysis(selected_startup)
-    st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><hr>",
+    st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><hr>",
                         unsafe_allow_html=True)
     st.sidebar.markdown("<p style='text-align: center;'>Created by <b>Navneet</b></p>", unsafe_allow_html=True)
 else:
