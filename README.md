@@ -19,29 +19,29 @@ It enables insights for both startups and investors through clustering-based rec
 
   * Startups (to identify comparable startups and competitors)
 
-🗂 Dataset Description
+🗂 **Dataset Description**
 
 The dataset contains funding information for Indian startups.
 
-Key Columns:
+**Key Columns:**
 
-StartUp – Startup name
+**StartUp** – Startup name
 
-Investor – Investor(s) involved
+**Investor** – Investor(s) involved
 
-Vertical – Industry category
+**Vertical** – Industry category
 
-SubVertical – Sub-sector
+**SubVertical** – Sub-sector
 
-City – Startup location
+**City** – Startup location
 
-Round – Funding stage
+**Round** – Funding stage
 
-Amount in Cr – Funding amount
+**Amount in Cr** – Funding amount
 
-Date, Year, Month – Time-related features
+**Date, Year, Month** – Time-related features
 
-🧹 Data Cleaning & Preprocessing
+🧹 ** ##Data Cleaning & Preprocessing**
 
 Standardized startup and investor names
 
