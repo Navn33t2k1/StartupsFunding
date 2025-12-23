@@ -44,24 +44,10 @@ def Startup_Analysis(startup):
         html = f"<p style='font-size: 18px; font-weight: bold;'>{df[df['StartUp'].str.contains(startup, case=False)]['Vertical'].values[0]}</p>"
         st.markdown(html, unsafe_allow_html=True)
     with col5:
-        # st.write('SubIndustry')
-        # unique_subvertical = []
-        # for i in df[df['StartUp'].str.contains(startup, case=False)]['SubVertical']:
-        #     if not any(fuzz.partial_ratio(i, j) >= 80 for j in unique_subvertical):
-        #         unique_subvertical.append(i)
-        # if len(unique_subvertical)>1:
-        #     html = f"<p style='font-size: 18px; font-weight: bold;'>{', '.join(unique_subvertical).replace(', Not Specified', '')}</p>"
-        #     st.markdown(html, unsafe_allow_html=True)
-        # else:
-        #     html = f"<p style='font-size: 18px; font-weight: bold;'>{', '.join(unique_subvertical)}</p>"
-        #     st.markdown(html, unsafe_allow_html=True)
-
         st.write('Num_Deals')
         num_deals = startup_df1[startup_df1['startup_name'].str.contains(startup, case=False)]['Num_Deals'].values[0]
         html = f"<p style='font-size: 18px; font-weight: bold;'>{num_deals}</p>"
         st.markdown(html, unsafe_allow_html=True)
-
-
     with col3:
         st.write('Location')
         html = f"<p style='font-size: 18px; font-weight: bold;'>{df[df['StartUp'].str.contains(startup, case=False)]['City'].values[0]}</p>"
@@ -79,13 +65,6 @@ def Startup_Analysis(startup):
         html = f"<p style='font-size: 18px; font-weight: bold;'>{df[df['StartUp'].str.contains(startup, case=False)]['Amount in Cr'].sum()}</p>"
         st.markdown(html, unsafe_allow_html=True)
     with col7:
-        # st.write('Investors')
-        # unique_investors = []
-        # for i in df[df['StartUp'].str.contains(startup, case=False)]['Investor']:
-        #     if not any(fuzz.partial_ratio(i, j) >= 60 for j in unique_investors):
-        #         unique_investors.append(i)
-        # html = f"<p style='font-size: 18px; font-weight: bold;'>{', '.join(unique_investors)}</p>"
-        # st.markdown(html, unsafe_allow_html=True)
         st.write('Unique Investors')
         unique_invest = startup_df1[startup_df1['startup_name'].str.contains(startup, case=False)]['Unique_Investors'].values[0]
         html = f"<p style='font-size: 18px; font-weight: bold;'>{unique_invest}</p>"
@@ -270,7 +249,6 @@ def investor_details(name):
     st.subheader('Similar Investors')
     st.dataframe(investor_df1[investor_df1['Investor'].str.contains(name, case=False)].sort_values('Avg_Investment', ascending=False).iloc[:5, :5])
 
-    # invest_option = st.selectbox('Select One', ['Generally Invests in Sectors', 'Generally Invests in Cities', 'Generally Invests in Stages'])
     if invest_option== 'Generally Invests in Sectors':
         st.subheader('Generally Invests in Sectors')
         sector = df[df['Investor'].str.contains(name, case=False)].groupby('Vertical', as_index=False)[
