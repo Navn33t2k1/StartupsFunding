@@ -41,99 +41,81 @@ The dataset contains funding information for Indian startups.
 
 **Date, Year, Month** – Time-related features
 
-🧹 ** ##Data Cleaning & Preprocessing**
+🧹 **Data Cleaning & Preprocessing**
 
-Standardized startup and investor names
+* Standardized startup and investor names
 
-Applied TheFuzz (fuzzy string matching) to detect and merge similar textual entries
+* Applied TheFuzz (fuzzy string matching) to detect and merge similar textual entries
 
-Normalized funding rounds, verticals, and city names
+* Normalized funding rounds, verticals, and city names
 
-Handled missing, duplicate, and inconsistent values
+* Handled missing, duplicate, and inconsistent values
 
-Converted date fields into proper datetime format
+* Converted date fields into proper datetime format
 
 ✔ Resulted in a high-quality, analysis-ready dataset
 
-📈 Exploratory Data Analysis (EDA)
+📈 **Exploratory Data Analysis (EDA)**
 
-Analysis includes:
+**Analysis includes:**
 
-Year-wise funding trends
+* Year-wise funding trends
 
-City-wise and industry-wise funding distribution
+* City-wise and industry-wise funding distribution
 
-Top investors and funded startups
+* Top investors and funded startups
 
-Funding round patterns
+* Funding round patterns
 
-Temporal and seasonal insights
+* Temporal and seasonal insights
 
-📊 Interactive Dashboard
+📊 **Interactive Dashboard**
 
-Built using Streamlit
+* Built using Streamlit
 
-Visualizations created using Plotly
+* Visualizations created using Plotly
 
-Features:
+**Features:**
 
-Filters by year, city, industry, funding round
+* Filters by year, city, industry, funding round
 
-Interactive charts and tables
+* Interactive charts and tables
 
-Real-time data exploration
+* Real-time data exploration
 
-🤖 Recommendation Systems
-🔹 Startup Recommendation System
+🤖 **Recommendation Systems**
+🔹 **Startup Recommendation System**
 
-Implemented using KMeans clustering
-
-Groups startups based on:
-
-Funding amount
-
-Industry vertical
-
-Funding frequency
-
-Growth-related features
+* Implemented using KMeans clustering
 
 Helps identify similar startups for benchmarking and competitive analysis
 
-🔹 Investor Recommendation System
-
-Uses clustering to group investors based on:
-
-Investment patterns
-
-Preferred funding stages
-
-Industry focus
+🔹 **Investor Recommendation System**
 
 Recommends relevant startups to investors and similar investors for analysis
 
-🛠 Tools & Technologies
+🛠 **Tools & Technologies**
 
-Python
+* Python
 
-Pandas & NumPy
+* Pandas & NumPy
 
-Plotly – Interactive visualizations
+* **Plotly** – Interactive visualizations
 
-Streamlit – Dashboard development
+* **Streamlit** – Dashboard development
 
-TheFuzz – Fuzzy string matching
+* **TheFuzz** – Fuzzy string matching
 
-Scikit-learn (KMeans) – Clustering & recommendations
+* **Scikit-learn (KMeans)** – Clustering & recommendations
 
-Jupyter Notebook
+* Jupyter Notebook
 
-📌 Key Insights
+📌 **Key Insights**
 
-Bengaluru dominates the Indian startup funding ecosystem
+* Bengaluru dominates the Indian startup funding ecosystem
 
-Fintech and Edtech attract the highest investments
+* Fintech and Edtech attract the highest investments
 
-Early-stage funding rounds are most common
+* Early-stage funding rounds are most common
 
-Clustering reveals distinct startup and investor profiles
+* Clustering reveals distinct startup and investor profiles
