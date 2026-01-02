@@ -200,19 +200,19 @@ def Overall_Analysis():
     fig3 = px.imshow(pivot_table, text_auto=True, labels=dict(color='Total Funding'))
     st.plotly_chart(fig3)
 
-    # st.subheader("Normalized List of Startup Funding Rounds")
-    # temp_df = pd.Series(df['Round'].str.split(',').apply(lambda x: [i.strip() for i in x if i.strip()]).sum(),
-    #                     name='Round')
-    # unique_rounds = []
-    # for i in temp_df:
-    #     if not any(fuzz.ratio(i, name) >= 90 for name in unique_rounds):
-    #         unique_rounds.append(i)
-    # html_str = "<ul>\n"
-    # for start in unique_rounds:
-    #     html_str += f"<li>{start}</li>\n"
-    # html_str += "</ul>"
+    st.subheader("Normalized List of Startup Funding Rounds")
+    temp_df = pd.Series(df['Round'].str.split(',').apply(lambda x: [i.strip() for i in x if i.strip()]).sum(),
+                        name='Round')
+    unique_rounds = []
+    for i in temp_df:
+        if not any(fuzz.ratio(i, name) >= 90 for name in unique_rounds):
+            unique_rounds.append(i)
+    html_str = "<ul>\n"
+    for start in unique_rounds:
+        html_str += f"<li>{start}</li>\n"
+    html_str += "</ul>"
 
-    # st.markdown(html_str, unsafe_allow_html=True)
+    st.markdown(html_str, unsafe_allow_html=True)
 
 def investor_details(name):
     st.title('Investor Analysis')
